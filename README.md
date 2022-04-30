@@ -80,6 +80,8 @@ chmod +x ./stop.sh
 
 进入的指令统一为 `docker exec -it <container_name> /bin/bash`
 
+Docker 容器和宿主机间的文件传输可用使用 `docker cp <container_name>:<path> <host_path>` 以及 `docker cp <host_path> <container_name>:<path>` 来完成
+
 有兴趣的话可以看 Compose yaml 文件来了解更多实现细节
 
 下面列出一些 Compose 启动后或许有用的端口

@@ -47,7 +47,7 @@
 
 ```shell
 chmod +x ./start.sh
-./start.sh
+./start.sh # 启动 Compose
 ```
 
 注：启动的过程包括了一步 HBase 镜像的 build
@@ -56,8 +56,10 @@ chmod +x ./start.sh
 
 ```shell
 chmod +x ./stop.sh
-./stop.sh
+./stop.sh # stop脚本会删除所有容器及其新增非 volume 中数据，谨慎操作
 ```
+
+**!!注意!!**: start 脚本切记执行一次后不要再执行，否则会覆盖上次启动，导致数据丢失；如果过程中需要暂停容器（虽然基本不需要，docker 的实现方式决定了它基本不需要有意关闭），可以使用 `docker-compose stop` 命令而不是 stop 脚本
 
 ### 注意事项
 

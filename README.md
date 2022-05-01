@@ -41,11 +41,6 @@
 
    - [中科大镜像源](https://mirrors.ustc.edu.cn/help/dockerhub.html)
 
-4. 建立适合版本的本地 HBase 镜像
-   - 使用我提供的 DockerFile 建立本地 HBase 镜像，执行命令：
-     1. `cd images/HBase-standalone`
-     2. `docker build -t bde2020/hbase-standalone:2.0.0-hbase2.2.2 .`
-
 ### 启动 Compose
 
 我封装了一个简单的启动脚本，当然大家可以根据自己的情况自行修改
@@ -54,6 +49,8 @@
 chmod +x ./start.sh
 ./start.sh
 ```
+
+注：启动的过程包括了一步 HBase 镜像的 build
 
 同样的有关关闭也做了一个简单的脚本
 

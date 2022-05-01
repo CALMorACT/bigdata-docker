@@ -162,7 +162,7 @@ services:
             - hadoop
 
     hbase:
-        image: bde2020/hbase-standalone:2.0.0-hbase2.2.2
+        build: ./images/HBase-standalone
         container_name: hbase
         volumes:
             - hbase_data:/hbase-data

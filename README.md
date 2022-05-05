@@ -28,7 +28,7 @@
    - 使用 WSL2
      - 关于 WSL2，我的一篇博客略有介绍：[WSL2](https://blog.holakk.cf/2021/03/20/WSL2%E7%9A%84%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E6%96%B9%E6%A1%88-%E5%8C%85%E6%8B%AC%E4%BB%A3%E7%90%86%E5%92%8Cdocker%E4%BB%A5%E5%8F%8A%E7%BB%88%E7%AB%AF%E9%85%8D%E7%BD%AE/)
 
-2. 安装 Docker 及 Docker Compose
+2. 安装 Docker 及 Docker Compose V2
 
    1. 安装 Docker：[Docker](https://docs.docker.com/get-docker/)
 

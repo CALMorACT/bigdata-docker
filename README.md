@@ -30,12 +30,15 @@
 
 2. 安装 Docker 及 Docker Compose
 
-   - 安装 Docker：[Docker](https://docs.docker.com/get-docker/)
-     - Docker 没有原生的 Windows 支持，请使用 WSL2 配合 Docker Desktop
-     - Docker Desktop 也在 Linux 上有了 Beta 版本，当然并不建议，Linux 请按照文档逐步安装 Docker
-   - 安装 Docker Compose：[Docker Compose](https://docs.docker.com/compose/)
-     - WSL2 配置方案中的 Docker Desktop 自带了 Docker Compose
-     - 普通 Linux 方案请按照文档安装
+   1. 安装 Docker：[Docker](https://docs.docker.com/get-docker/)
+
+      - Docker 没有原生的 Windows 支持，请使用 WSL2 配合 Docker Desktop
+      - Docker Desktop 也在 Linux 上有了 Beta 版本，当然并不建议，Linux 请按照文档逐步安装 Docker
+
+   2. 安装 Docker Compose：[Docker Compose](https://docs.docker.com/compose/)
+
+      - WSL2 配置方案中的 Docker Desktop 自带了 Docker Compose
+      - 普通 Linux 方案请按照文档安装
 
 3. 为 Docker 更换一个合适的源
 

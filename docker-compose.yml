@@ -122,7 +122,7 @@ services:
             - hadoop
 
     spark-master:
-        image: bde2020/spark-master:3.0.2-hadoop3.2
+        image: bde2020/spark-master:3.2.0-hadoop3.2
         container_name: spark-master
         depends_on:
             - namenode
@@ -133,26 +133,37 @@ services:
             - 8080:8080
             - 7077:7077
             - 4040:4040
-            - 18080:18080
         env_file:
-            - ./hadoop.env
+            - hadoop.env
         networks:
             - hadoop
 
     spark-worker:
-        image: bde2020/spark-worker:3.0.2-hadoop3.2
+        image: bde2020/spark-worker:3.2.0-hadoop3.2
         container_name: spark-worker
         depends_on:
             - spark-master
+        ports:
+            - "8081:8081"
         environment:
             - "SPARK_MASTER=spark://spark-master:7077"
-        ports:
-            - 8081:8081
         env_file:
-            - ./hadoop.env
+            - hadoop.env
         networks:
             - hadoop
-
+    spark-history-server:
+        image: bde2020/spark-history-server:3.2.0-hadoop3.2
+        container_name: spark-history-server
+        depends_on:
+            - spark-master
+        ports:
+            - "18081:18081"
+        volumes:
+            - spark-events:/tmp/spark-events
+        env_file:
+            - hadoop.env
+        networks:
+            - hadoop
     R-data-analysis:
         image: rocker/tidyverse:latest
         container_name: R-data-analysis
@@ -187,6 +198,7 @@ volumes:
     hive_metastore:
     hbase_data:
     hbase_zookeeper_data:
+    spark-events:
 
 
 networks:

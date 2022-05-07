@@ -79,6 +79,7 @@ sudo ./stop.sh # stop脚本会删除所有容器及其新增非 volume 中数据
 - hive 中 PostgreSQL 相关的操作请进入 hive-metastore-postgresql 实现
 - HBase 相关的操作 请进入 hbase 实现
 - R 语言相关的数据分析操作请进入 R-data-analysis 实现
+- spark 相关操作请进入 spark-master 实现
 
 进入的指令统一为 `docker exec -it <container_name> /bin/bash`
 

@@ -1,6 +1,7 @@
 # BigData Docker
 
 为大数据课程制作的 Docker 环境，模拟多机环境，覆盖课程所需的各种软件环境
+目前 Spark 环境经过测试完整完成实验
 
 项目初衷是帮助大家不受环境配置的困扰，提高学习效率；至于写代码和命令行肯定有一些变化，遇到问题可以直接提 issue
 
@@ -79,7 +80,7 @@ sudo ./stop.sh # stop脚本会删除所有容器及其新增非 volume 中数据
 - hive 中 PostgreSQL 相关的操作请进入 hive-metastore-postgresql 实现
 - HBase 相关的操作 请进入 hbase 实现
 - R 语言相关的数据分析操作请进入 R-data-analysis 实现
-- spark 相关操作请进入 spark-master 实现
+- spark 相关操作请进入 spark-worker 实现
 
 进入的指令统一为 `docker exec -it <container_name> /bin/bash`
 

@@ -157,7 +157,7 @@ services:
         depends_on:
             - spark-master
         ports:
-            - "18081:18081"
+            - 18081:18081
         volumes:
             - spark-events:/tmp/spark-events
         env_file:
